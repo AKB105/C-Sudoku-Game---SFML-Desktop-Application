@@ -1,12 +1,8 @@
-Hi Angelo,
-
-Building an entire Sudoku game requires a lot more time than what you are given. I suggest: 
-
+Building an entire Sudoku game will take time, so
 Minimum Requirements:
+- Build a Sudoku board and puzzle generator
 
-Use a predefined Sudoku puzzle (hardcoded in the program or read from a text file). [You can build a sudoku solver later in the summer after this ends!] 
-
-Display the board in the console.
+- Display the board in the console.
 
 Let the player:
 - Enter a row, column, and number.
@@ -19,24 +15,18 @@ Let the player:
 
 - End the game when the board is completely filled.
 
-I do expect this to be done using classes. 
-
-Stretch Goals (Optional)
-If you finish early: 
+Extra Goals (Optional): 
 - Difficulty selection (different predefined boards) `(DONE!!)`
 
 - A hint system `(DONE)`
 
-- Save/load the game `(... No.)`
+- Save/load the game `(... Not yet.)`
 
 - A timer `(DONE!!)`
 
 - Limited lives (e.g., lose after 3 invalid moves) `(DONE!!)`
 
 - Score based on time or mistakes `(DONE!!)`
-
-Let me know if you need any help! Cheering you on!
-Syeda
 
 # Angelo's notes:
 On a rough, unpolished basis, every program should be as follow:
