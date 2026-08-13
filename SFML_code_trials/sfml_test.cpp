@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 
 int main(){
-    sf::RenderWindow cliche_window(sf::VideoMode({800, 600}), "Hello, World!");
+    sf::RenderWindow cliche_window(sf::VideoMode({800, 600}), "Very first window!!");
     
     while (cliche_window.isOpen()){
         while (const std::optional event = cliche_window.pollEvent()){
