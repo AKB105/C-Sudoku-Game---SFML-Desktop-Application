@@ -1,3 +1,4 @@
+# Notes to self in order to create a full Sudoku application
 Building an entire Sudoku game will take time, so
 Minimum Requirements:
 - Build a Sudoku board and puzzle generator
@@ -28,7 +29,7 @@ Extra Goals (Optional):
 
 - Score based on time or mistakes `(DONE!!)`
 
-# Angelo's notes:
+## AKB's notes:
 On a rough, unpolished basis, every program should be as follow:
 
 **1- `SudokuBoard.hpp`**
@@ -58,10 +59,10 @@ Very small. It should just create a `SudokuGame object` and start it.
         return 0;
     }
 ```
-# Compilation command:
+## Compilation command:
 ```g++ MainPlay.cpp SudokuBoard.cpp SudokuGame.cpp -o SudokuGame.exe```
 
-List of edge cases and things to fix: 
+## List of edge cases and things to fix: 
 - ClearScreen works, but it erases way too much. It's erasing welcoming message before user can even read it.
   Also, user doesn't receive any form of confirmation that their move was correct. 
   Likewise, user can't see the warning messages of invalid move or to not change locked cells 
