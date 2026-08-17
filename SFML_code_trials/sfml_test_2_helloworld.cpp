@@ -39,7 +39,7 @@ int main(){
 
         //Updates the screen with every change that happened due to user action
         //which is nothing... Yet.
-        hiWindow.clear();
+        hiWindow.clear(sf::Color::Red);
         hiWindow.draw(message);
         hiWindow.display();
     }
