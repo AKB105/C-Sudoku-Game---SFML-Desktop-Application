@@ -1,5 +1,6 @@
 //Here's where the Sudoku will be played
 #include "SudokuGame.hpp"
+#include "SudokuWindow.hpp"
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -12,6 +13,8 @@ int main(){
     while(running){
 
         SudokuGame game;
+        WindowSudoku winSudoku;
+        winSudoku.WelcomeMessage();
         game.PlayGame();
 
         do {

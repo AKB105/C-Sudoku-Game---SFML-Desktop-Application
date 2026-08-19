@@ -46,7 +46,13 @@ Defines the game controller: starting the game, reading user input, checking win
 **4- `SudokuGame.cpp`**
 Implements the gameplay loop. This is where we ask the user for row/col/value, call the board to validate the move, update the board, and refresh the screen.
 
-**5- Play.cpp**
+**5- `SudokuWindow.hpp`**
+Defines the window screen class and declares all the functions necessary for the program to be displayed on an actual, interactive environment.
+
+**6- `SudokuWindow.cpp`**
+Defines the functions that were created in the .hpp file so that they can actually be used by Play.cpp.
+
+**5- `Play.cpp`**
 Very small. It should just create a `SudokuGame object` and start it.
 
 `Example:`
@@ -59,8 +65,6 @@ Very small. It should just create a `SudokuGame object` and start it.
         return 0;
     }
 ```
-## Compilation command:
-```g++ MainPlay.cpp SudokuBoard.cpp SudokuGame.cpp -o SudokuGame.exe```
 
 ## List of edge cases and things to fix: 
 - ClearScreen works, but it erases way too much. It's erasing welcoming message before user can even read it.
