@@ -11,6 +11,13 @@ class WindowSudoku{
     private:
         sf::RenderWindow window;
         sf::Font style_;
+
+        enum class Screen_Type_{
+            welcome,
+            config,
+            game,
+            pause,
+        };
     
 };
 
