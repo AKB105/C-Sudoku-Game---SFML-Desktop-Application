@@ -7,7 +7,7 @@
 #include <iostream>
 
 int main(){
-    sf::RenderWindow hiWindow(sf::VideoMode({800, 600}), "Salutation window!!"); //Creates a 800*600 window titled "Very first window!!"
+    sf::RenderWindow hiWindow(sf::VideoMode({800, 600}), "Salutation window!!"); //Creates a 800*600 window titled "Salutation window!!"
     sf::Font style;
     
     //The if-statement guarantees that style variable gets a file to hold and load

@@ -65,6 +65,8 @@ int main(){
             if (event->is<sf::Event::Closed>()){
                 window_Block.close();
             }
+            //Pretty much checks if one of the mouse buttons were pressed, specifically the left one, checks the coordinates where it clicked, 
+            //then checks if those coordinates are inside the area of little_box
             if (const auto* mousePressed = event->getIf<sf::Event::MouseButtonPressed>()){
                 if(mousePressed->button == sf::Mouse::Button::Left){
                     sf::Vector2f mousePosition(static_cast<float>(mousePressed->position.x), static_cast<float>(mousePressed->position.y));
@@ -76,27 +78,37 @@ int main(){
         }
 
         //Updates the screen with every change that happened due to user action
-        //which is nothing... Yet.
         if(buttonPressed == true){
             window_Block.clear(sf::Color::Magenta);
 
-            message.setString("Bye bye world!");
+            sf::RectangleShape grid({60.f, 60.f});
+            
+            grid.setFillColor(sf::Color::Transparent);
+            grid.setOutlineThickness(5.f);
+            grid.setOutlineColor(sf::Color::White);
+            grid.setPosition({0.f,0.f});
 
-            borders.setSize({625.f, 75.f});
+            //Notes: This is the basis for my sudoku grid... A little step for man, a big one for SUDOKU!!
+            for (float i = 0; i < 9; i++){
+                for(float j = 0; j < 9; j++){
+                    grid.setPosition({100.f + j * 60.f, 30.f + i * 60.f});
+                    window_Block.draw(grid);
+                }
+            }
+
         } else{
             window_Block.clear(sf::Color::Red); //Calling clear before drawing anything is mandatory, 
-        };                                     //otherwise the contents from previous frames will be present behind anything you draw.
-
-        window_Block.draw(message);
-        window_Block.draw(borders);
-
-        window_Block.draw(next);
-        window_Block.draw(little_box);
+                                                //otherwise the contents from previous frames will be present behind anything you draw.
+            window_Block.draw(message);
+            window_Block.draw(borders);
+    
+            window_Block.draw(next);
+            window_Block.draw(little_box);
+        };                                     
 
         window_Block.display(); //Calling display is also mandatory, it takes what was drawn since the last call to display and displays it on the window. 
                                 //Indeed, things are not drawn directly to the window, but to a hidden buffer. 
                                 //This buffer is then copied to the window when you call display -- this is called double-buffering.
-
     }
 
     return 0;
