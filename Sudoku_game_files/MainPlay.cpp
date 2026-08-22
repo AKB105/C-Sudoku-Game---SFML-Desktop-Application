@@ -6,16 +6,17 @@
 #include <cctype>
 
 int main(){
-    bool running = true;
+    bool running = false;
     std::string play_Again = " ";
+    
+    WindowSudoku winSudoku;
+    winSudoku.GameRunner();
     
     //ADDON: Allow the user to start a new game after winning or losing
     while(running){
 
-        SudokuGame game;
-        WindowSudoku winSudoku;
-        winSudoku.WelcomeMessage();
-        game.PlayGame();
+        //SudokuGame game;
+        //game.PlayGame();
 
         do {
             std::cout << "\nDo you want to play again? [yes/no or y/n]: ";
